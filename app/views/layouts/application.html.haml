@@ -1,11 +1,16 @@
 !!! 5
 %html
   %head
-    %title Welcome to Sisterweb
+    %title 
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
   %body
-    #main
-      = yield
+    %p
+    #main-container.container
+      .row
+        .col-xs-3
+          %h3 Sister{Web}
+        .col-xs-9
+          = yield
