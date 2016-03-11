@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'annotate', '~> 2.4.1.beta'
-#enbles attr_accessible to work
 gem 'protected_attributes'
+gem 'annotate', '~> 2.4.1.beta'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 
