@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+   ruby '2.3.0'
 
 gem 'protected_attributes'
 gem 'annotate', '~> 2.4.1.beta'
