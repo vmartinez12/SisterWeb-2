@@ -1,21 +1,55 @@
 !!! 5
 %html
   %head
+    %img{:alt => "SisterWeb Logo", :height => "60", :src => "http://s17.postimg.org/8os55eqr3/Sister_Web.jpg", :width => "60"}/
     %title 
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-
+    /* no bullets of margins on list for navigation*/
+    :css
+      ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+      }
+      
+      li {
+          float: left;
+      }
+      
+      li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+      
+      li a:hover:not(.active) {
+          background-color: #111;
+      }
+      
+      .active {
+          background-color: #4CAF50;
+      }
   %body
     %p
+    /* navigation bar is a list */
+    %ul
+      %li
+        %a{:href => "/staticpages/home"} Home
+      %li{:style => "float:right"}
+        %a.active{:href => "/profiles"} Profiles
+      %li{:style => "float:right"}
+        %a.active{:href => "#forums"} Forums
+      %li{:style => "float:right"}
+        %a.active{:href => "#about"} About
     #main-container.container
       .row
         .col-xs-3
-          %h1.title SW
-          %h1 Sister{Web}
-      .row    
+          %h2 
         .col-xs-9
-          
           = yield
-          
-        
