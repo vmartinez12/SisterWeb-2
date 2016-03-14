@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get 'staticpages/links'
 
+  resource :calendar, only: [:show], controller: :calendar
+  #root to: "calendar#show"
+
   resources :profiles
   root :to => redirect('/staticpages/home')
   
